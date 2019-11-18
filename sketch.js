@@ -46,6 +46,10 @@ function setup () {
 	}
 	console.log('HRV', paranormalHRVcb);
   
+  //CS
+  //braucht es den reailtime code in diesem Sketch? 
+  //wenn nicht, nehmt ihn raus. 
+  //Das reduziert dann die Kpmplexität eueres Codes.
    //Verbindung zum Broker herstellen
   var client = mqtt.connect('mqtt://aeba5ae7:98e21bb6bccdb957@broker.shiftr.io', {
     clientId: 'framalytics'
