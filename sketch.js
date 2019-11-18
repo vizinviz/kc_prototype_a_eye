@@ -106,29 +106,47 @@ function draw () {
   text("Interval: " + hrv, 100, 120);
   text("GSR: " + gsr, 100, 140);
 
+  //CS
+  //ihr braucht den titel nur einmal zu zeichnen
+  //hab ihn aus der for loop rausgenommen
+  fill ('yellow');
+  noStroke();
+  text ("HEARTRATE VARIABILITY",50, 250);
   //PLAYBACK: Visualisierung Daten (statisches Balkendiagramm)
   for (var i = 0; i<paranormalHRVcb.length; i++) {
     var x = map(i,0,paranormalHRVcb.length-1,50,windowWidth-50);
     var height = map(paranormalHRVcb[i],500,1500,0,60)
-    fill ('yellow');
-    noStroke();
-    text ("HEARTRATE VARIABILITY",50, 250);
+    //fill ('yellow');
+    //noStroke();
+    //text ("HEARTRATE VARIABILITY",50, 250);
     rect (x,320,1,-height);
   }
+
+  //CS
+  //auch hier text nur einmal zeichnen
+  fill ('yellow');
+  noStroke();
+  text ("GALVANIC SKIN RESPONSE", 50, 400);
   for (var i = 0; i<paranormalGSRcb.length; i++) {
 		var x = map(i,0,paranormalGSRcb.length-1,50,windowWidth-50);
 		var height = map(paranormalGSRcb[i],100,400,0,60)
-		fill ('yellow');
-    noStroke();
-    text ("GALVANIC SKIN RESPONSE", 50, 400);
+		//fill ('yellow');
+    //noStroke();
+    //text ("GALVANIC SKIN RESPONSE", 50, 400);
     rect (x,470,1,-height);
   }
+
+  //CS
+  //text nur einmal zeichnen
+  fill ('yellow');
+  noStroke();
+  text ("HEARTRATE",50, 550);
   for (var i = 0; i<paranormalRATEcb.length; i++) {
     var x = map(i,0,paranormalRATEcb.length-1,50,windowWidth-50);
     var height = map(paranormalRATEcb[i],30,120,0,60)
-    fill ('yellow');
-    noStroke();
-    text ("HEARTRATE",50, 550);
+    //fill ('yellow');
+    //noStroke();
+    //text ("HEARTRATE",50, 550);
     rect (x,620,1,-height);
   }
   
